@@ -2,6 +2,9 @@
 
 This repository documents a working fix for the green-line / green-screen issue seen on some RK3588 / RK3588S Android 12 devices when playing 1080p HEVC Main10 SDR video.
 
+> **💡 Compatibility Note:**
+> This module is theoretically applicable to **all RK3588/RK3588S Android 12 devices** that suffer from 10-bit SDR decoding anomalies (such as green-line or green-screen). This is because the two core proprietary libraries involved (`libmpp.so` and `libcodec2_rk_component.so`) are generally common across different manufacturer boards and devices using this SoC.
+
 ## Result
 Verified behavior on the target device:
 - 1080p HEVC Main10 BT.709 SDR samples: fixed
