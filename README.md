@@ -36,29 +36,15 @@ Preserved HDR case:
 - 24 fps
 
 ## Repository Layout
-- `template/`: Magisk package template without proprietary vendor blobs
-- `scripts/build_magisk_zip.ps1`: builds a flashable zip from locally extracted vendor files
+- `META-INF/`: Magisk installer scripts
+- `system/`: Contains the proprietary vendor `.so` libraries
+- `module.prop` & `post-fs-data.sh`: Magisk module configuration
 - `SHA256SUMS.txt`: reference hashes collected during validation
 - `GITHUB_RELEASE_NOTES.md`: publishing guidance and redistribution warning
 
-## Build The Flashable Zip
-Prepare a local directory that contains:
-- `lib64/libmpp.so`
-- `lib/libmpp.so`
-- `lib64/libcodec2_rk_component.so`
-- `lib/libcodec2_rk_component.so`
-
-Then run:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\build_magisk_zip.ps1 -VendorRoot <path-to-vendor.ext_unzip>
-```
-
-The zip will be created in `dist/`.
-
 ## Installation
-1. Build the zip from your locally extracted vendor files.
-2. Install it with your preferred root module installer.
+1. To build the flashable zip, simply compress all files in this repository into a `.zip` archive. Ensure you compress the files *directly* (e.g. `module.prop` at the root of the zip).
+2. Install the zip with your preferred root module installer (like Magisk).
 3. Reboot.
 4. Verify playback with both 1080p SDR and 4K HDR samples.
 

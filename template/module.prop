@@ -1,6 +1,0 @@
-id=rk3588_mpp_linear_fix
-name=RK3588 Rock5B Codec2 Trial
-version=v2.2
-versionCode=4
-author=Agent
-description=Trial build using Rock5B stock libmpp and Rock5B stock libcodec2_rk_component.

@@ -1,16 +1,3 @@
-# Local build artifacts
-module_backup_verified/
-package/
-*.zip
-*.img
-*.raw
-*.bin
-vendor_blobs/
-dist/
-
-# Proprietary vendor blobs
-*.so
-
 # OS/editor
 Thumbs.db
 .DS_Store
